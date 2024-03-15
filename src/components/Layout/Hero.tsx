@@ -19,7 +19,7 @@ export function Hero() {
 	}
 
 	return (
-		<div className="w-full">
+		<div className="w-full z-10">
 			<img
 				src={GetImageResource()}
 				alt="Pattern"

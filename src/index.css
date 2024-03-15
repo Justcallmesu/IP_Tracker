@@ -8,7 +8,7 @@
 @layer base {
 	body,
 	html {
-		@apply font-Rubik;
+		@apply font-Rubik overflow-x-hidden;
 	}
 }
 
