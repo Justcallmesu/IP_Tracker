@@ -44,6 +44,10 @@ export function App() {
 		setIPAddress(IP);
 	}
 
+	function updateError(value: boolean) {
+		setIsError(value);
+	}
+
 	async function FetchAPIData() {
 		if (!IPAddress) return;
 
@@ -70,10 +74,14 @@ export function App() {
 	return (
 		<GetDataContext.Provider value={IPAddress}>
 			<UpdateDataContext.Provider value={UpdataData}>
-				<div className="h-screen flex flex-col items-center">
-					<Hero />
-					<Card APIData={APIData} />
-				</div>
+				<updateIsErrorContext.Provider value={updateError}>
+					<isErrorContext.Provider value={isError}>
+						<div className="h-screen flex flex-col items-center">
+							<Hero />
+							<Card APIData={APIData} />
+						</div>
+					</isErrorContext.Provider>
+				</updateIsErrorContext.Provider>
 			</UpdateDataContext.Provider>
 		</GetDataContext.Provider>
 	);
