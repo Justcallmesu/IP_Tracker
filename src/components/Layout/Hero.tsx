@@ -19,7 +19,7 @@ export function Hero() {
 	}
 
 	return (
-		<>
+		<div className="w-full">
 			<img
 				src={GetImageResource()}
 				alt="Pattern"
@@ -29,6 +29,6 @@ export function Hero() {
 				<h1 className="text-white text-3xl font-[400]">IP Address Tracker</h1>
 				<InputField />
 			</div>
-		</>
+		</div>
 	);
 }

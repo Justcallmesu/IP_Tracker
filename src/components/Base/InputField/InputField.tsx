@@ -25,13 +25,13 @@ export function InputField() {
 
 	return (
 		<div className="w-full flex justify-center">
-			<div className="w-2/6 flex justify-center rounded-xl overflow-hidden">
+			<div className="w-full mx-14 lg:mx-0 lg:w-2/6 flex justify-center rounded-xl overflow-hidden">
 				<input
 					type="text"
 					value={input}
 					onChange={handleInputOnChange}
 					placeholder="Search for any IP address or domain"
-					className="w-full pl-5"
+					className="w-full pl-5 text-sm lg:text-[18px]"
 				/>
 				<button
 					className="bg-black p-5 outline-none border-none"

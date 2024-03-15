@@ -16,4 +16,7 @@
 }
 
 @layer utilities {
+	.Information-display {
+		@apply text-black font-[700] text-lg lg:text-2xl;
+	}
 }
