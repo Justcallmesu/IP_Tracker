@@ -61,7 +61,7 @@ export function InputField() {
 					className={getErrorClass()}
 				/>
 				<button
-					className="bg-black p-5 outline-none border-none"
+					className="bg-black p-5 outline-none border-none active:bg-[#969696]"
 					onClick={handleButtonSubmit}>
 					<img
 						src={Arrow}
