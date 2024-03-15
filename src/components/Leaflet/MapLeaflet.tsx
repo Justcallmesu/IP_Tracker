@@ -8,6 +8,9 @@ import {
 } from "react-leaflet";
 import { LatLngExpression } from "leaflet";
 
+// Map Icon
+import { MarkerIcon } from "./MapMarker";
+
 // Leaflet
 import "leaflet/dist/leaflet.css";
 
@@ -25,7 +28,9 @@ export function MapLeaflet({ APIData }: { APIData: IPData }) {
 
 	function MarkerFunction() {
 		return (
-			<Marker position={getLatLng()}>
+			<Marker
+				position={getLatLng()}
+				icon={MarkerIcon}>
 				{ip ? (
 					<>
 						<Popup>{ip}</Popup>
