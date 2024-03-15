@@ -5,7 +5,7 @@ import DesktopPattern from "../../Assets/images/pattern-bg-desktop.png";
 import MobilePattern from "../../Assets/images/pattern-bg-mobile.png";
 
 // Components
-import { InputField } from "../Base/InputField";
+import { InputField } from "../Base/InputField/InputField";
 
 export function Hero() {
 	// Media Query
