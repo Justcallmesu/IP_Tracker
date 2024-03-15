@@ -27,6 +27,7 @@ export function useUpdateIsErrorContext() {
 // Components
 import { Hero } from "./components/Layout/Hero";
 import { IPData } from "./interface/IPData.interface";
+import { Card } from "./components/Base/Card/Card";
 
 export function App() {
 	// Axios
@@ -41,6 +42,10 @@ export function App() {
 
 	function UpdataData(IP: string) {
 		setIPAddress(IP);
+	}
+
+	function updateError(value: boolean) {
+		setIsError(value);
 	}
 
 	async function FetchAPIData() {
@@ -69,9 +74,14 @@ export function App() {
 	return (
 		<GetDataContext.Provider value={IPAddress}>
 			<UpdateDataContext.Provider value={UpdataData}>
-				<div className="h-screen flex flex-col">
-					<Hero />
-				</div>
+				<updateIsErrorContext.Provider value={updateError}>
+					<isErrorContext.Provider value={isError}>
+						<div className="h-screen flex flex-col items-center">
+							<Hero />
+							<Card APIData={APIData} />
+						</div>
+					</isErrorContext.Provider>
+				</updateIsErrorContext.Provider>
 			</UpdateDataContext.Provider>
 		</GetDataContext.Provider>
 	);
