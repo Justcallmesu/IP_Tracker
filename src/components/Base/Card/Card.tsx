@@ -9,14 +9,14 @@ export function Card({ APIData }: { APIData: IPData }) {
 				<h3>IP Address</h3>
 				<h1 className="Information-display">{ip ? ip : ""}</h1>
 			</section>
-			<div className="h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
+			<div className="hidden lg:block h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
 			<section className="w-full lg:w-1/4">
 				<h3>Location</h3>
 				<h1 className="Information-display">
 					{location?.city ? `${location?.city}, ${location?.region}` : ""}
 				</h1>
 			</section>
-			<div className="h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
+			<div className="hidden lg:block h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
 
 			<section className="w-full lg:w-1/4">
 				<h3>Timezone</h3>
@@ -24,7 +24,7 @@ export function Card({ APIData }: { APIData: IPData }) {
 					{location?.timezone ? `UTC-${location?.timezone.slice(1)}` : ""}
 				</h1>
 			</section>
-			<div className="h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
+			<div className="hidden lg:block h-20 w-[0.5px] rounded-lg bg-[#969696]"></div>
 			<section className="w-full lg:w-1/4">
 				<h3>ISP</h3>
 				<h1 className="Information-display">{isp ? isp : ""}</h1>
