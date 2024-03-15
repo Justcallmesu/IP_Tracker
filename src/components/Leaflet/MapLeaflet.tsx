@@ -3,18 +3,16 @@ import {
 	TileLayer,
 	Marker,
 	Popup,
-	useMapEvent,
 	Tooltip,
 	useMap,
 } from "react-leaflet";
-import { LatLngExpression, map } from "leaflet";
+import { LatLngExpression } from "leaflet";
 
 // Leaflet
 import "leaflet/dist/leaflet.css";
 
 // INterface
 import { IPData } from "src/interface/IPData.interface";
-import { useEffect } from "react";
 
 export function MapLeaflet({ APIData }: { APIData: IPData }) {
 	const { location, ip } = APIData;
